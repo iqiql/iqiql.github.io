@@ -3654,5 +3654,38 @@ Qu...
   <!-- Custom Files bodyEnd begin-->
   
   <!-- Custom Files bodyEnd end-->
+	  <center>
+    <footer id="footer" class="clearfix">
+    
+    <br>
+     Copyright <i class="far fa-copyright"></i>
+    <a href="https://www.qiql.net/" target="_blank"> qiql&#39;S BLOG </a>丨
+    <img src="https://www.qiql.top/assets/images/icp.png" style="width:18px;height:18px;margin-bottom:-2px" alt="ICP">
+    <a href="https://beian.miit.gov.cn/" target="_blank">苏ICP备2021036796号-2</a>丨
+    <!-- 网安备案 -->
+    <img src="https://www.qiql.top/assets/images/wangan.png" style="width:18px;height:18px;margin-bottom:-3px" alt="MOE ICP">
+    <a href="http://www.beian.gov.cn/portal/recordQuery?token=23ed5639-4f2e-4a73-b2e8-e437f06c6251" target="_blank">苏公网安备 32021102001258 号</a>丨
+    <!-- 网站运行时间 -->
+    <span id="timeDate">正在载入...</span><span id="times"><span><i class="fa fa-spinner fa-spin"> </i></span></span>
+    <script>
+    var now = new Date(); 
+    function createtime() {
+      var grt= new Date("12/09/2021 17:30:00");//建站时间2022-07-26
+      now.setTime(now.getTime()+250); 
+      days = (now - grt ) / 1000 / 60 / 60 / 24; dnum = Math.floor(days); 
+      hours = (now - grt ) / 1000 / 60 / 60 - (24 * dnum); hnum = Math.floor(hours); 
+      if(String(hnum).length ==1 ){hnum = "0" + hnum;} minutes = (now - grt ) / 1000 /60 - (24 * 60 * dnum) - (60 * hnum); 
+      mnum = Math.floor(minutes); if(String(mnum).length ==1 ){mnum = "0" + mnum;} 
+      seconds = (now - grt ) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum); 
+      snum = Math.round(seconds); if(String(snum).length ==1 ){snum = "0" + snum;} 
+      document.getElementById("timeDate").innerHTML = "本站已运行 "
+      document.getElementById("times").innerHTML = dnum +" 天 " + hnum + " 小时 " + mnum + " 分 " + snum + " 秒"; 
+      /*document.getElementById("times").style.color="#0056FF";*/
+      }
+      setInterval("createtime()",250);
+    </script>
+</footer>
+</center>
   </body>
+	
 </html>
